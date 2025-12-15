@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна | Дари Полісся</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="mobile-header">
+    <button class="burger-icon" onclick="toggleMenu()">☰</button>
+    <div class="header-title">Дари Полісся</div>
+    <button class="theme-icon-mobile" onclick="toggleTheme()">☀</button>
+</header>
+
+<nav class="sidebar" id="sidebar">
+    <div class="user-profile">
+        <img src="img/logo.jpg" alt="Логотип">
+        <h3>Дари Полісся</h3>
+        <p style="font-size: 0.8rem; color: #888;">Еко-продукція</p>
+    </div>
+    <div class="menu">
+        <a href="index.html" class="active">ГОЛОВНА</a>
+        <div class="dropdown">
+            <a href="#">КАТАЛОГ ▾</a>
+            <div class="dropdown-container">
+                <a href="mushrooms.html">Гриби сушені</a>
+                <a href="berries.html">Ягоди лісові</a>
+            </div>
+        </div>
+        <a href="gallery.html">ГАЛЕРЕЯ</a>
+        <a href="about.html">ПРО НАС</a>
+        <a href="contacts.html">КОНТАКТИ</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()">Змінити тему</button>
+    </div>
+</nav>
+
+<main class="main-content">
+    <div class="content-card">
+        <h1>Природні скарби Рівненщини</h1>
+        <hr>
+        <img src="img/main.jpg" alt="Ліс Полісся" style="width:100%; height:350px; object-fit:cover; border-radius: 10px; margin-bottom: 20px;">
+        <h2>Сезонний збір розпочато</h2>
+        <p>Ласкаво просимо до нашого магазину екологічно чистих продуктів. Ми спеціалізуємося на заготівлі дикорослих грибів та ягід у серці Поліських лісів. Ніякої хімії, лише чиста природа та ручна праця.</p>
+        <a href="mushrooms.html" class="btn">Переглянути каталог грибів</a>
+    </div>
+
+    <div style="margin-top: 40px;">
+        <h3>Часті запитання</h3>
+        <details>
+            <summary>Як відбувається доставка?</summary>
+            <p style="padding-top:10px;">Ми пакуємо замовлення у герметичні пакети та еко-коробки. Відправка здійснюється через Нову Пошту щодня о 16:00. Термін доставки 1-2 дні.</p>
+        </details>
+        <details>
+            <summary>Чи є сертифікати якості?</summary>
+            <p style="padding-top:10px;">Так, кожна партія проходить радіологічний контроль. Ми маємо всі необхідні дозволи на збір та продаж дикоросів.</p>
+        </details>
+        <details>
+            <summary>Які умови зберігання?</summary>
+            <p style="padding-top:10px;">Сушені гриби слід зберігати у скляній тарі в темному місці до 2 років. Заморожені ягоди — при температурі -18°C.</p>
+        </details>
+    </div>
+
+    <footer>
+        <hr>
+        <p>Матвійчук Ірина.</p>
+    </footer>
+</main>
+
+<script>
+function toggleMenu() {
+    var sb = document.getElementById("sidebar");
+    if (sb.style.display === "block") { sb.style.display = "none"; } else { sb.style.display = "block"; }
+}
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>

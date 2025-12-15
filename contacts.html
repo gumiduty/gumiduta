@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | Дари Полісся</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="mobile-header">
+    <button class="burger-icon" onclick="toggleMenu()">☰</button>
+    <div class="header-title">Контакти</div>
+    <button class="theme-icon-mobile" onclick="toggleTheme()">☀</button>
+</header>
+
+<nav class="sidebar" id="sidebar">
+    <div class="user-profile">
+        <img src="img/logo.jpg" alt="Логотип">
+        <h3>Дари Полісся</h3>
+    </div>
+    <div class="menu">
+        <a href="index.html">ГОЛОВНА</a>
+        <div class="dropdown">
+            <a href="#">КАТАЛОГ ▾</a>
+            <div class="dropdown-container">
+                <a href="mushrooms.html">Гриби сушені</a>
+                <a href="berries.html">Ягоди лісові</a>
+            </div>
+        </div>
+        <a href="gallery.html">ГАЛЕРЕЯ</a>
+        <a href="about.html">ПРО НАС</a>
+        <a href="contacts.html" class="active">КОНТАКТИ</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()">Змінити тему</button>
+    </div>
+</nav>
+
+<main class="main-content">
+    <h1>Зворотній зв'язок</h1>
+    <hr>
+    
+    <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div class="card-item" style="padding: 30px; text-align:left;">
+            <h3 style="text-align: center;">Напишіть нам</h3>
+            <form action="#">
+                <label>ПІБ</label>
+                <input type="text" placeholder="Ваше ім'я" required>
+                
+                <label>Електронна пошта</label>
+                <input type="email" placeholder="example@gmail.com" required>
+                
+                <label>Текст повідомлення</label>
+                <textarea style="height:120px" placeholder="Замовлення або питання..."></textarea>
+                
+                <button class="btn" style="width:100%">Надіслати листа</button>
+            </form>
+        </div>
+
+        <div class="card-item" style="padding: 30px; text-align:left;">
+            <h3 style="text-align: center;">Контактна інформація</h3>
+            <div style="margin-top: 20px; line-height: 2;">
+                <b>Офіс та склад:</b><br>Рівне, ліс 23</p>
+                <b>Телефон відділу продажу:</b><br>+380 97 555 1234</p>
+                <b>Email:</b><br>sales@polis-dary.com.ua</p>
+                <b>Графік роботи:</b><br>Пн-Пт: 09:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <p>Матвійчук Ірина.</p>
+    </footer>
+</main>
+
+<script>
+function toggleMenu() {
+    var sb = document.getElementById("sidebar");
+    if (sb.style.display === "block") { sb.style.display = "none"; } else { sb.style.display = "block"; }
+}
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>

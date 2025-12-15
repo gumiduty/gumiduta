@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гриби | Делікатеси Полісся</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="mobile-header">
+    <button class="burger-icon" onclick="toggleMenu()">&#9776;</button>
+    <div class="header-title">Гриби</div>
+    <button class="theme-icon-mobile" onclick="toggleTheme()">&#9728;</button>
+</header>
+
+<nav class="sidebar" id="sidebar">
+    <div class="user-profile">
+        <img src="img/logo.jpg" alt="Logo">
+        <h3>Делікатеси Полісся</h3>
+    </div>
+    <div class="menu">
+        <a href="index.html">ГОЛОВНА</a>
+        <div class="dropdown">
+            <a href="#" class="active">КАТАЛОГ &#9662;</a>
+            <div class="dropdown-container" style="display:block;">
+                <a href="mushrooms.html" class="active" style="padding-left:30px;">Гриби</a>
+                <a href="berries.html">Ягоди</a>
+            </div>
+        </div>
+        <a href="gallery.html">ГАЛЕРЕЯ</a>
+        <a href="about.html">ПРО НАС</a>
+        <a href="contacts.html">КОНТАКТИ</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()">&#9728; Змінити тему</button>
+    </div>
+</nav>
+
+<main class="main-content">
+    <h1>Каталог Грибів</h1>
+    <hr>
+    
+    <div class="gallery-grid">
+        <article class="card-item">
+            <img src="img/1.jpg" alt="Білий гриб">
+            <h3>Білий гриб сушений</h3>
+            <p>Елітний сорт, упаковка 100г.</p>
+            <p><b>Ціна: 150 грн</b></p>
+            <button class="btn">Купити</button>
+        </article>
+        
+        <article class="card-item">
+            <img src="img/2.jpg" alt="Лисички">
+            <h3>Лисички сушені</h3>
+            <p>Дуже корисні, упаковка 100г.</p>
+            <p><b>Ціна: 120 грн</b></p>
+            <button class="btn">Купити</button>
+        </article>
+
+        <article class="card-item">
+            <img src="img/3.jpg" alt="Маслюки">
+            <h3>Маслюки мариновані</h3>
+            <p>Банка 0.5л, домашній рецепт.</p>
+            <p><b>Ціна: 90 грн</b></p>
+            <button class="btn">Купити</button>
+        </article>
+    </div>
+
+    <footer>
+        <hr>
+        <p>Матвійчук Ірина.</p>
+    </footer>
+</main>
+
+<script>
+function toggleMenu() {
+    var sb = document.getElementById("sidebar");
+    if (sb.style.display === "block") { sb.style.display = "none"; } else { sb.style.display = "block"; }
+}
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ягоди | Дари Полісся</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="mobile-header">
+    <button class="burger-icon" onclick="toggleMenu()">☰</button>
+    <div class="header-title">Ягоди</div>
+    <button class="theme-icon-mobile" onclick="toggleTheme()">☀</button>
+</header>
+
+<nav class="sidebar" id="sidebar">
+    <div class="user-profile">
+        <img src="img/logo.jpg" alt="Логотип">
+        <h3>Дари Полісся</h3>
+    </div>
+    <div class="menu">
+        <a href="index.html">ГОЛОВНА</a>
+        <div class="dropdown">
+            <a href="#" class="active">КАТАЛОГ ▾</a>
+            <div class="dropdown-container" style="display:block;">
+                <a href="mushrooms.html">Гриби сушені</a>
+                <a href="berries.html" class="active" style="padding-left:20px; font-weight:bold;">Ягоди лісові</a>
+            </div>
+        </div>
+        <a href="gallery.html">ГАЛЕРЕЯ</a>
+        <a href="about.html">ПРО НАС</a>
+        <a href="contacts.html">КОНТАКТИ</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()">Змінити тему</button>
+    </div>
+</nav>
+
+<main class="main-content">
+    <h1>Лісові вітаміни</h1>
+    <hr>
+    <p>Свіжі ягоди доступні в сезон (червень-вересень). В інший час пропонуємо заморожені ягоди або джеми.</p>
+    
+    <div class="gallery-grid">
+        <article class="card-item">
+            <img src="img/yagoda1.jpg" alt="Чорниця">
+            <h3>Чорниця лісова</h3>
+            <p>Для покращення зору. Заморозка.</p>
+            <p style="color: var(--accent-color); font-weight: bold; font-size: 1.1rem;">120 грн / кг</p>
+            <button class="btn">Замовити</button>
+        </article>
+        
+        <article class="card-item">
+            <img src="img/yagoda2.jpg" alt="Журавлина">
+            <h3>Журавлина болотна</h3>
+            <p>Потужний імуностимулятор.</p>
+            <p style="color: var(--accent-color); font-weight: bold; font-size: 1.1rem;">150 грн / кг</p>
+            <button class="btn">Замовити</button>
+        </article>
+
+        <article class="card-item">
+            <img src="img/yagoda3.jpg" alt="Малина">
+            <h3>Варення малинове</h3>
+            <p>Домашній рецепт без цукру (на меду).</p>
+            <p style="color: var(--accent-color); font-weight: bold; font-size: 1.1rem;">200 грн / 0.5л</p>
+            <button class="btn">Замовити</button>
+        </article>
+    </div>
+
+    <footer>
+        <hr>
+        <p>Матвійчук Ірина.</p>
+    </footer>
+</main>
+
+<script>
+function toggleMenu() {
+    var sb = document.getElementById("sidebar");
+    if (sb.style.display === "block") { sb.style.display = "none"; } else { sb.style.display = "block"; }
+}
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
